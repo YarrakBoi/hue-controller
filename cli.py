@@ -1,4 +1,5 @@
 import click
+from test import *
 
 @click.group()
 def cli():
@@ -23,3 +24,9 @@ def set_brightness(level):
 cli.add_command(turn_on)
 cli.add_command(turn_off)
 cli.add_command(set_brightness)
+
+def main():
+    cli.main(standalone_mode=False)
+
+if __name__ == "__main__":
+    main()
